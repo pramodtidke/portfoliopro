@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PortfolioPro by Pramod Tidke — Stand Out. Get Hired.</title>
+  <meta name="description" content="Get a professional portfolio website built from your resume. Includes .in domain, GitHub Pages hosting, GitHub profile optimization. ₹7,999 all inclusive." />
+  <meta name="keywords" content="portfolio website, resume to portfolio, DevOps portfolio, developer portfolio India, GitHub profile optimization" />
+  <meta property="og:title" content="PortfolioPro by Pramod Tidke" />
+  <meta property="og:description" content="Your resume gets 6 seconds. Make them count. Professional portfolio website from ₹7,999." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- Scroll Progress -->
+<div id="scroll-progress"></div>
+
+<!-- Floating WhatsApp -->
+<a id="whatsapp-float" href="https://wa.me/918830376414?text=Hi%20Pramod!%20I'm%20interested%20in%20PortfolioPro.%20Can%20you%20share%20more%20details?" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-brand">Portfolio<span>Pro</span></a>
+  <ul class="nav-links">
+    <li><a href="#why">Why Portfolio</a></li>
+    <li><a href="#included">What's Included</a></li>
+    <li><a href="#work">Our Work</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="https://wa.me/918830376414?text=Hi%20Pramod!%20I'm%20interested%20in%20PortfolioPro." target="_blank" class="nav-links a nav-cta" style="color:white;background:#2563EB;padding:0.5rem 1.2rem;border-radius:6px;font-weight:500;text-decoration:none;font-size:0.9rem;">Get Started →</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="particles-canvas"></canvas>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      <span>PortfolioPro by Pramod Tidke</span>
+    </div>
+    <h1 class="hero-headline">
+      Your Resume Gets<br>
+      <span class="gradient-text" id="typing-text" data-text="6 Seconds. Make Them Count.">6 Seconds. Make Them Count.</span>
+    </h1>
+    <p class="hero-sub">
+      We transform your resume into a stunning professional portfolio website — complete with .in domain, GitHub profile optimization, and everything a recruiter needs to say yes.
+    </p>
+    <div class="hero-ctas">
+      <a href="https://wa.me/918830376414?text=Hi%20Pramod!%20I'm%20interested%20in%20PortfolioPro.%20Can%20you%20share%20more%20details?" target="_blank" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chat on WhatsApp
+      </a>
+      <a href="mailto:pramodtidkework@gmail.com?subject=PortfolioPro Inquiry" class="btn-secondary">
+        ✉️ Send Email
+      </a>
+    </div>
+    <div class="hero-price-tag">
+      <span>Everything included, starting at just</span>
+      <strong>₹7,999</strong>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">7</div>
+        <div class="stat-label">Day Delivery</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Resume Based</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">.in</div>
+        <div class="stat-label">Domain Included</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF BAR -->
+<div id="social-proof">
+  <div class="proof-bar">
+    <div class="proof-item">
+      <div class="proof-num" data-count="12">0+</div>
+      <div class="proof-label">Portfolios Delivered</div>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-item">
+      <div class="proof-num" data-count="100">0+</div>
+      <div class="proof-label">Satisfaction Rate</div>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-item">
+      <div class="proof-num" data-count="7">0+</div>
+      <div class="proof-label">Day Turnaround</div>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-item">
+      <div class="proof-num" data-count="3">0+</div>
+      <div class="proof-label">Design Styles</div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY PORTFOLIO -->
+<section id="why">
+  <div class="container">
+    <span class="section-label reveal">// why_portfolio.md</span>
+    <h2 class="section-title reveal">Recruiters Judge You<br>Before They Call You</h2>
+    <p class="section-sub reveal">100 candidates. Same resume format. Same skills. The one with a live portfolio gets the call.</p>
+
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon">🔍</div>
+        <h3>Recruiters Google You</h3>
+        <p>After seeing your resume, the first thing a recruiter does is search your name. A portfolio site is what they find — or don't.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">⚡</div>
+        <h3>Instant Credibility</h3>
+        <p>A live site with your projects, GitHub profile, and skills signals that you are serious — before a single word is spoken.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">🏆</div>
+        <h3>Stand Out in Screening</h3>
+        <p>ATS systems filter 90% of resumes. A portfolio link bypasses algorithms and puts you directly in front of human eyes.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">🕐</div>
+        <h3>Works 24/7 For You</h3>
+        <p>Your portfolio pitches you while you sleep. Every visit is a potential opportunity — even when you're not actively applying.</p>
+      </div>
+    </div>
+
+    <div class="recruiter-quote reveal">
+      <div class="recruiter-avatar">👩‍💼</div>
+      <div>
+        <blockquote>"When I see a portfolio link on a resume, I open it before I even read the resume. It tells me immediately whether this person is serious about their craft."</blockquote>
+        <cite>— Senior Technical Recruiter, Bangalore</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section id="before-after">
+  <div class="container">
+    <span class="section-label reveal">// transformation.compare</span>
+    <h2 class="section-title reveal">From Plain Resume<br>To Professional Presence</h2>
+    <p class="section-sub reveal">See exactly what changes when you hand us your resume.</p>
+
+    <div class="before-after-container">
+      <div class="before-card reveal">
+        <div class="card-header">❌ &nbsp;Without PortfolioPro</div>
+        <div class="before-content">
+          <div>Name: Rohan Mehta</div>
+          <div>Email: rohan@gmail.com</div>
+          <div>Phone: 98XXXXXXXX</div>
+          <div>&nbsp;</div>
+          <div>Skills: AWS, Docker, K8s</div>
+          <div>&nbsp;</div>
+          <div>Experience:</div>
+          <div>&nbsp; DevOps Eng - XYZ Corp</div>
+          <div>&nbsp; 2021 - Present</div>
+          <div>&nbsp;</div>
+          <div style="color:#ef4444;">→ Looks like everyone else's resume</div>
+          <div style="color:#ef4444;">→ No way to verify skills</div>
+          <div style="color:#ef4444;">→ Forgotten in the pile</div>
+        </div>
+      </div>
+
+      <div class="vs-badge">
+        <div class="vs-text">VS</div>
+      </div>
+
+      <div class="after-card reveal">
+        <div class="card-header">✅ &nbsp;With PortfolioPro</div>
+        <div class="after-content">
+          <div class="after-preview-header">
+            <div class="after-avatar">👨‍💻</div>
+            <div>
+              <div class="after-name">Rohan Mehta</div>
+              <div class="after-role">Senior DevOps Engineer · rohanmehta.in</div>
+            </div>
+          </div>
+          <div class="after-skills">
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">Kubernetes</span>
+            <span class="skill-tag">Terraform</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">CI/CD</span>
+          </div>
+          <div class="after-links">
+            <a href="#" class="after-link">🌐 Live Portfolio</a>
+            <a href="#" class="after-link">🐙 GitHub Profile</a>
+            <a href="#" class="after-link">💼 LinkedIn</a>
+          </div>
+          <div style="margin-top:1rem;font-size:0.8rem;">
+            <span style="color:#22c55e;">✓ Instantly verifiable</span> &nbsp;
+            <span style="color:#22c55e;">✓ Stands out</span> &nbsp;
+            <span style="color:#22c55e;">✓ Gets the call</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED -->
+<section id="included">
+  <div class="container">
+    <span class="section-label reveal">// package.json</span>
+    <h2 class="section-title reveal">Everything Included.<br>Zero Surprises.</h2>
+    <p class="section-sub reveal">One package. One price. Complete professional presence — built from just your resume.</p>
+
+    <div class="included-grid">
+      <div class="included-item reveal">
+        <div class="included-check">✓</div>
+        <div class="included-text">
+          <h4>Portfolio Website</h4>
+          <p>5-section site built directly from your resume — About, Skills, Experience, Projects, Contact.</p>
+        </div>
+      </div>
+      <div class="included-item reveal">
+        <div class="included-check">✓</div>
+        <div class="included-text">
+          <h4>.in Domain Included (1 Year)</h4>
+          <p>Your own yourname.in — no hidden costs, no domain hunting. We handle everything.</p>
+        </div>
+      </div>
+      <div class="included-item reveal">
+        <div class="included-check">✓</div>
+        <div class="included-text">
+          <h4>GitHub Pages Hosting</h4>
+          <p>Fast, reliable, free hosting for life. No monthly bills — ever.</p>
+        </div>
+      </div>
+      <div class="included-item reveal">
+        <div class="included-check">✓</div>
+        <div class="included-text">
+          <h4>Terminal Aesthetic Design</h4>
+          <p>Premium dark design that makes tech professionals look the part. Clean and cinematic.</p>
+        </div>
+      </div>
+      <div class="included-item reveal">
+        <div class="included-check">✓</div>
+        <div class="included-text">
+          <h4>GitHub Profile Optimization</h4>
+          <p>README, pinned repos, bio, and activity — your GitHub will look as good as your site.</p>
+        </div>
+      </div>
+      <div class="included-item reveal">
+        <div class="included-check">✓</div>
+        <div class="included-text">
+          <h4>Custom Domain Setup</h4>
+          <p>Domain bought, DNS configured, and connected to your site. You get a live URL.</p>
+        </div>
+      </div>
+      <div class="included-item reveal">
+        <div class="included-check">✓</div>
+        <div class="included-text">
+          <h4>LinkedIn + GitHub Integration</h4>
+          <p>All your profiles linked and consistent. One click for recruiters to verify you.</p>
+        </div>
+      </div>
+      <div class="included-item reveal">
+        <div class="included-check">✓</div>
+        <div class="included-text">
+          <h4>SEO Basics</h4>
+          <p>Meta tags, page title, and description so Google finds you when recruiters search your name.</p>
+        </div>
+      </div>
+      <div class="included-item reveal">
+        <div class="included-check">✓</div>
+        <div class="included-text">
+          <h4>Mobile Responsive</h4>
+          <p>Looks perfect on every screen — desktop, tablet, and mobile.</p>
+        </div>
+      </div>
+      <div class="included-item reveal">
+        <div class="included-check">✓</div>
+        <div class="included-text">
+          <h4>2 Revision Rounds + 1 Month Support</h4>
+          <p>Changes after delivery? We've got you covered for 30 days post-launch.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="price-box reveal">
+      <p class="price-label">All of the above, for just</p>
+      <div class="price">₹7,999</div>
+      <p class="price-label" style="margin-top:0.5rem;">One time. No monthly fees. No hidden costs.</p>
+      <div class="price-ctas">
+        <a href="https://wa.me/918830376414?text=Hi%20Pramod!%20I%20want%20to%20get%20started%20with%20PortfolioPro." target="_blank" class="btn-primary">
+          🚀 Get Started on WhatsApp
+        </a>
+        <a href="mailto:pramodtidkework@gmail.com?subject=PortfolioPro - I'm Ready!" class="btn-secondary">
+          ✉️ Email Us
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR WORK -->
+<section id="work">
+  <div class="container">
+    <span class="section-label reveal">// our_work/</span>
+    <h2 class="section-title reveal">Real Work.<br>Live Sites.</h2>
+    <p class="section-sub reveal">Don't take our word for it — click through and see what we've built.</p>
+
+    <div class="work-grid">
+
+      <!-- Real Client 1 -->
+      <div class="work-card reveal">
+        <div class="work-preview work-preview-real">
+          <span class="work-badge badge-live">● LIVE</span>
+          <div class="work-preview-inner">
+            <div class="work-preview-icon">🌐</div>
+            <div class="work-preview-url">ujwalakare.in</div>
+          </div>
+        </div>
+        <div class="work-info">
+          <h3>Ujwal Akare</h3>
+          <p>Professional portfolio with custom .in domain — clean, fast, recruiter-ready.</p>
+          <a href="https://ujwalakare.in" target="_blank" rel="noopener">View Live Site →</a>
+        </div>
+      </div>
+
+      <!-- Real Client 2 -->
+      <div class="work-card reveal">
+        <div class="work-preview work-preview-real">
+          <span class="work-badge badge-live">● LIVE</span>
+          <div class="work-preview-inner">
+            <div class="work-preview-icon">🌐</div>
+            <div class="work-preview-url">sumit-website</div>
+          </div>
+        </div>
+        <div class="work-info">
+          <h3>Sumit Shahare</h3>
+          <p>Developer portfolio hosted on GitHub Pages — projects, skills, and contact all in one place.</p>
+          <a href="https://sumitshahare.github.io/sumit-website/" target="_blank" rel="noopener">View Live Site →</a>
+        </div>
+      </div>
+
+      <!-- Demo Fresher -->
+      <div class="work-card reveal">
+        <div class="work-preview work-preview-demo">
+          <span class="work-badge badge-demo">DEMO</span>
+          <div class="work-preview-inner">
+            <div class="work-preview-icon">👨‍🎓</div>
+            <div style="color:#94A3B8;font-size:0.75rem;margin-top:0.3rem;">Fresher Level</div>
+          </div>
+        </div>
+        <div class="work-info">
+          <h3>Aarav Shah — Fresher</h3>
+          <p>BE CSE 2024 passout. First job seeker portfolio — Python, SQL, Git, college projects.</p>
+          <span style="color:#475569;font-size:0.85rem;font-family:var(--font-mono);">Demo persona</span>
+        </div>
+      </div>
+
+      <!-- Demo Mid -->
+      <div class="work-card reveal">
+        <div class="work-preview work-preview-demo">
+          <span class="work-badge badge-demo">DEMO</span>
+          <div class="work-preview-inner">
+            <div class="work-preview-icon">👩‍💻</div>
+            <div style="color:#94A3B8;font-size:0.75rem;margin-top:0.3rem;">Mid Level</div>
+          </div>
+        </div>
+        <div class="work-info">
+          <h3>Neha Kulkarni — Mid Level</h3>
+          <p>3 years Backend Developer switching to product company — Node.js, PostgreSQL, Docker.</p>
+          <span style="color:#475569;font-size:0.85rem;font-family:var(--font-mono);">Demo persona</span>
+        </div>
+      </div>
+
+      <!-- Demo Senior -->
+      <div class="work-card reveal">
+        <div class="work-preview work-preview-demo">
+          <span class="work-badge badge-demo">DEMO</span>
+          <div class="work-preview-inner">
+            <div class="work-preview-icon">🧑‍🚀</div>
+            <div style="color:#94A3B8;font-size:0.75rem;margin-top:0.3rem;">Senior Level</div>
+          </div>
+        </div>
+        <div class="work-info">
+          <h3>Rohan Mehta — Senior</h3>
+          <p>7 years DevOps/Cloud Engineer targeting lead roles — AWS, Kubernetes, Terraform, CI/CD.</p>
+          <span style="color:#475569;font-size:0.85rem;font-family:var(--font-mono);">Demo persona</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="container">
+    <span class="section-label reveal">// process.sh</span>
+    <h2 class="section-title reveal">How It Works</h2>
+    <p class="section-sub reveal">Send your resume. Get a live portfolio. It's that simple.</p>
+
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h3>Share Your Resume</h3>
+          <p>Send your resume via WhatsApp or email. PDF or Word — any format works.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h3>We Build Your Site</h3>
+          <p>We extract your experience, skills, and projects and design a portfolio tailored to you.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h3>GitHub Profile Optimization</h3>
+          <p>We clean up your GitHub — README, pinned repos, bio — so it matches your site's quality.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h3>Domain Purchase & Setup</h3>
+          <p>We buy your yourname.in domain and configure everything — DNS, SSL, hosting.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <h3>Deploy & Go Live</h3>
+          <p>Your site goes live on GitHub Pages with your custom domain connected and working.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">6</div>
+        <div class="step-content">
+          <h3>You Review & We Refine</h3>
+          <p>2 revision rounds included. We refine until you're completely happy with the result.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">7</div>
+        <div class="step-content">
+          <h3>Add It To Your Resume</h3>
+          <p>Drop your portfolio link on your resume and LinkedIn. Watch the interview requests come in.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROI CALCULATOR -->
+<section id="roi">
+  <div class="container">
+    <span class="section-label reveal">// roi_calculator.js</span>
+    <h2 class="section-title reveal" style="text-align:center;">How Fast Does ₹7,999<br>Pay For Itself?</h2>
+
+    <div class="roi-card reveal">
+      <h3>ROI Calculator</h3>
+      <p>Drag the slider to your expected salary at your next job.</p>
+
+      <div class="roi-input-group">
+        <label>Expected Annual Salary</label>
+        <input type="range" id="salary-slider" min="4" max="50" value="12" step="1" />
+        <div class="roi-value" id="salary-display">₹12 LPA</div>
+      </div>
+
+      <div class="roi-result">
+        <div>Your portfolio pays for itself in just</div>
+        <div class="roi-payback" id="payback-days">—</div>
+        <p>of your new salary. One good interview call covers it entirely.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERY TIMER -->
+<div id="delivery">
+  <div class="delivery-box reveal">
+    <h2>⚡ Order Today. Go Live By</h2>
+    <p>We deliver in 7 days — guaranteed. Start today and your portfolio is live before next week.</p>
+    <div class="delivery-date" id="delivery-date">Calculating...</div>
+    <a href="https://wa.me/918830376414?text=Hi%20Pramod!%20I%20want%20to%20order%20PortfolioPro%20today." target="_blank" class="btn-primary" style="display:inline-flex;">
+      🚀 Start Today
+    </a>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <span class="section-label reveal">// faq.md</span>
+    <h2 class="section-title reveal" style="text-align:center;">Frequently Asked<br>Questions</h2>
+
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q">Do I need any technical knowledge? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Zero. You just send your resume. We handle everything — design, hosting, domain, GitHub setup. You get a live link and instructions to add it to your resume.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">What if I don't have many projects? <span class="faq-icon">+</span></button>
+        <div class="faq-a">No problem. We work with what you have. Even college projects, internships, or personal learning projects can be showcased professionally. A well-presented project is better than no project.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">How long does it take? <span class="faq-icon">+</span></button>
+        <div class="faq-a">7 days from the time you share your resume. We follow a structured process so there are no surprises. Need it faster? Contact us and we'll see what we can do.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">What do I need to share with you? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Just your resume — PDF or Word format. If you have a GitHub profile or LinkedIn, share those links too. That's it. We take it from there.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Is domain renewal extra after 1 year? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Yes. The first year is included in your ₹7,999 package. After that, domain renewal is approximately ₹600–900 per year which you manage directly. Hosting on GitHub Pages remains free forever.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Can I choose my design style? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Yes. We offer 3 design styles — Terminal Dark (for DevOps/Backend engineers), Minimal Light (for business/analyst roles), and Modern Gradient (for full stack/frontend roles). You pick the one that fits your field.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">What is your refund policy? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Since this is a custom service, refunds are not available once work has started. If you cancel before we begin, we offer a partial refund. Please read our full Refund Policy for details.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="cta-final">
+  <div class="container">
+    <h2 class="reveal">Ready to Stand Out?<br><span class="gradient-text">Let's Build Your Portfolio.</span></h2>
+    <p class="reveal">Share your resume today. Get a live portfolio in 7 days. Add it to your resume and stand out from day one.</p>
+    <div class="cta-buttons reveal">
+      <a href="https://wa.me/918830376414?text=Hi%20Pramod!%20I'm%20ready%20to%20get%20started%20with%20PortfolioPro.%20Here's%20my%20resume." target="_blank" class="btn-whatsapp">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chat on WhatsApp
+      </a>
+      <a href="mailto:pramodtidkework@gmail.com?subject=PortfolioPro - Ready to Get Started!" class="btn-email">
+        ✉️ Send Email
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        Portfolio<span>Pro</span>
+        <p>by Pramod Tidke</p>
+      </div>
+      <div class="footer-links">
+        <a href="pages/terms.html">Terms & Conditions</a>
+        <a href="pages/privacy.html">Privacy Policy</a>
+        <a href="pages/refund.html">Refund Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 PortfolioPro by Pramod Tidke. All rights reserved.</p>
+      <div class="footer-contact">
+        <a href="https://wa.me/918830376414" target="_blank">WhatsApp</a>
+        <a href="mailto:pramodtidkework@gmail.com">Email</a>
+        <a href="https://pramodtidke.in" target="_blank">pramodtidke.in</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
