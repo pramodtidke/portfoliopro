@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PortfolioPro by Pramod Tidke — Stand Out. Get Hired.</title>
+  <meta name="description" content="Get a professional portfolio website built from your resume. Includes .in domain, GitHub Pages hosting, GitHub profile optimization. ₹1,999 all inclusive." />
+  <meta name="keywords" content="portfolio website, resume to portfolio, DevOps portfolio, developer portfolio India, GitHub profile optimization" />
+  <meta property="og:title" content="PortfolioPro by Pramod Tidke" />
+  <meta property="og:description" content="Your resume gets 6 seconds. Make them count. Professional portfolio website from ₹1,999." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- Scroll Progress -->
+<div id="scroll-progress"></div>
+
+<!-- Floating WhatsApp -->
+<a id="whatsapp-float" href="https://wa.me/918830376414?text=Hi%20Pramod!%20I'm%20interested%20in%20PortfolioPro.%20Can%20you%20share%20more%20details?" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- FOUNDER'S OFFER BANNER -->
+<div id="founders-banner">
+  <div class="founders-banner-inner">
+    <span class="founders-fire">🔥</span>
+    <span class="founders-text">
+      <strong>Founder's Offer</strong> — First 2 clients only.
+      <del style="color:rgba(255,255,255,0.4);margin:0 0.3rem;">₹7,999</del>
+      <strong style="color:#FFD700;">₹1,999</strong>
+      <span class="founders-badge">75% OFF</span>
+    </span>
+    <span class="founders-countdown">
+      ⏰ Ends in:
+      <span class="cd-box" id="cd-hours">00</span>:
+      <span class="cd-box" id="cd-mins">00</span>:
+      <span class="cd-box" id="cd-secs">00</span>
+    </span>
+    <a href="https://wa.me/918830376414?text=Hi%20Pramod!%20I%20want%20the%20Founder%27s%20Offer%20at%20%E2%82%B91%2C999!" target="_blank" class="founders-cta">Claim Now →</a>
+  </div>
+</div>
+
+<script>
+// Countdown — 24 hours from first visit, stored in localStorage
+(function() {
+  var key = 'pp_countdown_end';
+  var end = localStorage.getItem(key);
+  if (!end) {
+    end = Date.now() + 24 * 60 * 60 * 1000;
+    localStorage.setItem(key, end);
+  }
+  end = parseInt(end);
+
+  function update() {
+    var now = Date.now();
+    var diff = end - now;
+    if (diff <= 0) {
+      document.getElementById('cd-hours').textContent = '00';
+      document.getElementById('cd-mins').textContent = '00';
+      document.getElementById('cd-secs').textContent = '00';
+      return;
+    }
+    var h = Math.floor(diff / 3600000);
+    var m = Math.floor((diff % 3600000) / 60000);
+    var s = Math.floor((diff % 60000) / 1000);
+    document.getElementById('cd-hours').textContent = String(h).padStart(2,'0');
+    document.getElementById('cd-mins').textContent = String(m).padStart(2,'0');
+    document.getElementById('cd-secs').textContent = String(s).padStart(2,'0');
+    setTimeout(update, 1000);
+  }
+  update();
+})();
+</script>
+
+<style>
+#founders-banner {
+  background: linear-gradient(90deg, #1a0a00, #2d1200, #1a0a00);
+  border-bottom: 1px solid rgba(249,115,22,0.4);
+  padding: 0.65rem 1rem;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1001;
+  animation: bannerGlow 3s ease infinite;
+}
+
+@keyframes bannerGlow {
+  0%, 100% { box-shadow: 0 2px 20px rgba(249,115,22,0.2); }
+  50% { box-shadow: 0 2px 30px rgba(249,115,22,0.4); }
+}
+
+.founders-banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.founders-fire { font-size: 1rem; animation: shake 1s infinite; }
+@keyframes shake {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+}
+
+.founders-text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.88rem;
+  color: #F8FAFC;
+}
+
+.founders-badge {
+  background: #F97316;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 100px;
+  margin-left: 0.3rem;
+  font-family: 'Space Grotesk', sans-serif;
+  animation: badgePop 1.5s ease infinite;
+}
+
+@keyframes badgePop {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+.founders-spots {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #F97316;
+}
+
+.founders-cta {
+  background: #F97316;
+  color: white;
+  padding: 0.3rem 0.9rem;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  font-family: 'Space Grotesk', sans-serif;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.founders-cta:hover { background: #ea6c0a; transform: scale(1.04); }
+
+.founders-countdown {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: #FFD700;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  white-space: nowrap;
+}
+
+.cd-box {
+  background: rgba(255,215,0,0.15);
+  border: 1px solid rgba(255,215,0,0.3);
+  color: #FFD700;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  min-width: 26px;
+  text-align: center;
+  animation: cdPulse 1s ease infinite;
+}
+
+@keyframes cdPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,215,0,0.3); }
+  50% { box-shadow: 0 0 8px 2px rgba(255,215,0,0.15); }
+}
+
+@media (max-width: 768px) {
+  .founders-countdown { display: none; }
+}
+
+/* Push nav down to account for banner */
+nav { top: 40px !important; }
+#hero { padding-top: 10rem !important; }
+
+@media (max-width: 768px) {
+  .founders-spots { display: none; }
+  nav { top: 38px !important; }
+  #hero { padding-top: 11rem !important; }
+}
+</style>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-brand">Portfolio<span>Pro</span></a>
+  <ul class="nav-links">
+    <li><a href="#why">Why Portfolio</a></li>
+    <li><a href="#included">What's Included</a></li>
+    <li><a href="#work">Our Work</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="https://wa.me/918830376414?text=Hi%20Pramod!%20I'm%20interested%20in%20PortfolioPro." target="_blank" class="nav-links a nav-cta" style="color:white;background:#2563EB;padding:0.5rem 1.2rem;border-radius:6px;font-weight:500;text-decoration:none;font-size:0.9rem;">Get Started →</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="particles-canvas"></canvas>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      <span>PortfolioPro by Pramod Tidke</span>
+    </div>
+    <h1 class="hero-headline">
+      Your Resume Gets<br>
+      <span class="gradient-text" id="typing-text" data-text="6 Seconds. Make Them Count.">6 Seconds. Make Them Count.</span>
+    </h1>
+    <p class="hero-sub">
+      We transform your resume into a stunning professional portfolio website — complete with .in domain, GitHub profile optimization, and everything a recruiter needs to say yes.
+    </p>
+    <div class="hero-ctas">
+      <a href="https://wa.me/918830376414?text=Hi%20Pramod!%20I'm%20interested%20in%20PortfolioPro.%20Can%20you%20share%20more%20details?" target="_blank" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chat on WhatsApp
+      </a>
+      <a href="mailto:pramodtidkework@gmail.com?subject=PortfolioPro Inquiry" class="btn-secondary">
+        ✉️ Send Email
+      </a>
+    </div>
+    <div class="hero-price-tag">
+      <span>Founder's Offer — First 2 clients only</span>
+      <div style="display:flex;align-items:center;justify-content:center;gap:0.8rem;margin-top:0.3rem;flex-wrap:wrap;">
+        <del style="color:#475569;font-size:1.3rem;">₹7,999</del>
+        <strong style="font-size:2rem;">₹1,999</strong>
+        <span style="background:#F97316;color:white;font-size:0.75rem;font-weight:700;padding:0.2rem 0.6rem;border-radius:100px;font-family:'Space Grotesk',sans-serif;">75% OFF</span>
+      </div>
+      <div style="font-size:0.8rem;color:#F97316;margin-top:0.4rem;font-family:'JetBrains Mono',monospace;">⚡ Only 2 spots at this price. Ever.</div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">24</div>
+        <div class="stat-label">Hour Delivery</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Resume Based</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">.in</div>
+        <div class="stat-label">Domain Included</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF BAR -->
+<div id="social-proof">
+  <div class="proof-bar">
+    <div class="proof-item">
+      <div class="proof-num" data-count="12">0+</div>
+      <div class="proof-label">Portfolios Delivered</div>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-item">
+      <div class="proof-num" data-count="100">0+</div>
+      <div class="proof-label">Satisfaction Rate</div>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-item">
+      <div class="proof-num" data-count="7">0+</div>
+      <div class="proof-label">Day Turnaround</div>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-item">
+      <div class="proof-num" data-count="3">0+</div>
+      <div class="proof-label">Design Styles</div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY PORTFOLIO -->
+<section id="why">
+  <div class="container">
+    <span class="section-label reveal">// why_portfolio.md</span>
+    <h2 class="section-title reveal">Recruiters Judge You<br>Before They Call You</h2>
+    <p class="section-sub reveal">100 candidates. Same resume format. Same skills. The one with a live portfolio gets the call.</p>
+
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon">🔍</div>
+        <h3>Recruiters Google You</h3>
+        <p>After seeing your resume, the first thing a recruiter does is search your name. A portfolio site is what they find — or don't.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">⚡</div>
+        <h3>Instant Credibility</h3>
+        <p>A live site with your projects, GitHub profile, and skills signals that you are serious — before a single word is spoken.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">🏆</div>
+        <h3>Stand Out in Screening</h3>
+        <p>ATS systems filter 90% of resumes. A portfolio link bypasses algorithms and puts you directly in front of human eyes.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">🕐</div>
+        <h3>Works 24/7 For You</h3>
+        <p>Your portfolio pitches you while you sleep. Every visit is a potential opportunity — even when you're not actively applying.</p>
+      </div>
+    </div>
+
+    <div class="recruiter-quote reveal">
+      <div class="recruiter-avatar">👩‍💼</div>
+      <div>
+        <blockquote>"When I see a portfolio link on a resume, I open it before I even read the resume. It tells me immediately whether this person is serious about their craft."</blockquote>
+        <cite>— Senior Technical Recruiter, Bangalore</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section id="before-after">
+  <div class="container">
+    <span class="section-label reveal">// transformation.compare</span>
+    <h2 class="section-title reveal">From Plain Resume<br>To Professional Presence</h2>
+    <p class="section-sub reveal">See exactly what changes when you hand us your resume.</p>
+
+    <div class="before-after-container">
+      <div class="before-card reveal">
+        <div class="card-header">❌ &nbsp;Without PortfolioPro</div>
+        <div class="before-content">
+          <div>Name: Rohan Mehta</div>
+          <div>Email: rohan@gmail.com</div>
+          <div>Phone: 98XXXXXXXX</div>
+          <div>&nbsp;</div>
+          <div>Skills: AWS, Docker, K8s</div>
+          <div>&nbsp;</div>
+          <div>Experience:</div>
+          <div>&nbsp; DevOps Eng - XYZ Corp</div>
+          <div>&nbsp; 2021 - Present</div>
+          <div>&nbsp;</div>
+          <div style="color:#ef4444;">→ Looks like everyone else's resume</div>
+          <div style="color:#ef4444;">→ No way to verify skills</div>
+          <div style="color:#ef4444;">→ Forgotten in the pile</div>
+        </div>
+      </div>
+
+      <div class="vs-badge">
+        <div class="vs-text">VS</div>
+      </div>
+
+      <div class="after-card reveal">
+        <div class="card-header">✅ &nbsp;With PortfolioPro</div>
+        <div class="after-content">
+          <div class="after-preview-header">
+            <div class="after-avatar">👨‍💻</div>
+            <div>
+              <div class="after-name">Rohan Mehta</div>
+              <div class="after-role">Senior DevOps Engineer · rohanmehta.in</div>
+            </div>
+          </div>
+          <div class="after-skills">
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">Kubernetes</span>
+            <span class="skill-tag">Terraform</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">CI/CD</span>
+          </div>
+          <div class="after-links">
+            <a href="#" class="after-link">🌐 Live Portfolio</a>
+            <a href="#" class="after-link">🐙 GitHub Profile</a>
+            <a href="#" class="after-link">💼 LinkedIn</a>
+          </div>
+          <div style="margin-top:1rem;font-size:0.8rem;">
+            <span style="color:#22c55e;">✓ Instantly verifiable</span> &nbsp;
+            <span style="color:#22c55e;">✓ Stands out</span> &nbsp;
+            <span style="color:#22c55e;">✓ Gets the call</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSFORM SECTION -->
+<section id="transform" style="background:#060d1f;padding:6rem 2rem;overflow:hidden;">
+  <div class="container">
+    <span class="section-label reveal" style="display:block;text-align:center;">// magic.transform()</span>
+    <h2 class="section-title reveal" style="text-align:center;margin-bottom:0.5rem;">Watch Your Resume<br><span class="gradient-text">Become a Portfolio</span></h2>
+    <p style="text-align:center;color:#94A3B8;font-size:1rem;margin-bottom:3rem;" class="reveal">Click the button. See the magic. This is exactly what we do for you.</p>
+
+    <!-- Transform Stage -->
+    <div class="tx-stage reveal">
+
+      <!-- Resume Card -->
+      <div class="tx-card tx-resume" id="tx-resume">
+        <div class="tx-bar">
+          <div class="tx-dots"><span class="d-red"></span><span class="d-yellow"></span><span class="d-green"></span></div>
+          <span class="tx-filename">📄 resume.pdf</span>
+          <span class="tx-badge-boring">Plain & Generic</span>
+        </div>
+        <div class="tx-resume-body">
+          <div class="tx-resume-header">
+            <div class="tx-resume-avatar"></div>
+            <div>
+              <div class="tx-resume-name">Rohan Mehta</div>
+              <div class="tx-resume-role">DevOps Engineer</div>
+              <div class="tx-resume-contact">rohan@gmail.com • 98XXXXXXXX • Pune</div>
+            </div>
+          </div>
+          <div class="tx-hr"></div>
+          <div class="tx-resume-section">SKILLS</div>
+          <div class="tx-resume-text">AWS, Docker, Kubernetes, Terraform, CI/CD, Linux, Jenkins, Git</div>
+          <div class="tx-hr"></div>
+          <div class="tx-resume-section">EXPERIENCE</div>
+          <div class="tx-resume-job">DevOps Engineer — XYZ Technologies</div>
+          <div class="tx-resume-date">Jan 2021 – Present</div>
+          <div class="tx-resume-text">• Managed AWS infrastructure for 50+ microservices</div>
+          <div class="tx-resume-text">• Reduced deployment time by 60% using CI/CD pipelines</div>
+          <div class="tx-resume-text">• Kubernetes cluster for container orchestration</div>
+          <div class="tx-hr"></div>
+          <div class="tx-resume-section">EDUCATION</div>
+          <div class="tx-resume-job">B.E. Computer Science — RTMNU, Nagpur · 2021</div>
+          <div class="tx-hr"></div>
+          <div class="tx-resume-section">CERTIFICATIONS</div>
+          <div class="tx-resume-text">AWS Solutions Architect Associate • CKA</div>
+        </div>
+      </div>
+
+      <!-- Middle -->
+      <div class="tx-mid">
+        <div class="tx-arrow-wrap">
+          <div class="tx-arrow-line" id="tx-arrow-line"></div>
+          <svg class="tx-arrow-icon" id="tx-arrow-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </div>
+        <button class="tx-btn" id="tx-btn" onclick="txGo()">
+          <span class="tx-btn-icon">✨</span>
+          <span id="tx-btn-label">Transform Now</span>
+        </button>
+        <div class="tx-powered">powered by PortfolioPro</div>
+      </div>
+
+      <!-- Portfolio Card -->
+      <div class="tx-card tx-portfolio" id="tx-portfolio">
+        <div class="tx-bar tx-bar-portfolio">
+          <div class="tx-dots"><span class="d-red"></span><span class="d-yellow"></span><span class="d-green"></span></div>
+          <span class="tx-filename" style="color:#3B82F6;">🌐 rohanmehta.in</span>
+          <span class="tx-badge-live" id="tx-live-badge">● LIVE</span>
+        </div>
+        <div class="tx-portfolio-body" id="tx-portfolio-body">
+
+          <!-- Locked overlay -->
+          <div class="tx-locked" id="tx-locked">
+            <div class="tx-lock-icon">🔒</div>
+            <div class="tx-lock-text">Click Transform to unlock</div>
+          </div>
+
+          <!-- Portfolio content (hidden until transform) -->
+          <div class="tx-portfolio-content" id="tx-portfolio-content">
+            <div class="tx-p-hero tx-anim-1">
+              <div class="tx-p-avatar">RM</div>
+              <div>
+                <div class="tx-p-cmd"><span style="color:#2563EB;font-family:'JetBrains Mono',monospace;font-size:0.72rem;">$ </span><span style="color:#94A3B8;font-family:'JetBrains Mono',monospace;font-size:0.72rem;">whoami</span></div>
+                <div class="tx-p-name">Rohan Mehta</div>
+                <div class="tx-p-role">Senior DevOps Engineer</div>
+                <div class="tx-p-links">
+                  <span class="tx-p-link">🌐 rohanmehta.in</span>
+                  <span class="tx-p-link tx-p-link-o">🐙 GitHub</span>
+                  <span class="tx-p-link">💼 LinkedIn</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="tx-p-block tx-anim-2">
+              <div class="tx-p-cmd-label">$ skills --list</div>
+              <div class="tx-p-tags">
+                <span class="tx-tag">AWS</span><span class="tx-tag">Docker</span><span class="tx-tag">Kubernetes</span><span class="tx-tag">Terraform</span><span class="tx-tag tx-tag-o">CI/CD</span><span class="tx-tag tx-tag-o">Linux</span><span class="tx-tag">Jenkins</span><span class="tx-tag">Git</span>
+              </div>
+            </div>
+
+            <div class="tx-p-block tx-anim-3">
+              <div class="tx-p-cmd-label">$ experience --show</div>
+              <div class="tx-p-exp">
+                <div class="tx-p-exp-role">DevOps Engineer</div>
+                <div class="tx-p-exp-co">XYZ Technologies · Jan 2021 – Present</div>
+                <div class="tx-p-exp-pt">↳ AWS infrastructure for 50+ microservices</div>
+                <div class="tx-p-exp-pt">↳ 60% faster deployments via CI/CD</div>
+                <div class="tx-p-exp-pt">↳ Kubernetes cluster orchestration</div>
+              </div>
+            </div>
+
+            <div class="tx-p-block tx-anim-4">
+              <div class="tx-p-cmd-label">$ certifications</div>
+              <div class="tx-p-certs">
+                <span class="tx-cert">🏆 AWS SAA</span>
+                <span class="tx-cert">🏆 CKA</span>
+              </div>
+            </div>
+
+            <div class="tx-p-success tx-anim-5">🚀 Recruiter-ready. Standing out already!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="tx-progress-wrap reveal" id="tx-progress-wrap" style="display:none;">
+      <div class="tx-progress-bar" id="tx-progress-bar"></div>
+      <div class="tx-progress-label" id="tx-progress-label">Building your portfolio...</div>
+    </div>
+
+    <!-- Reset -->
+    <div style="text-align:center;margin-top:1.5rem;">
+      <button class="tx-reset-btn" id="tx-reset" onclick="txReset()" style="display:none;">↩ Try Again</button>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="tx-bottom-cta reveal">
+      <div class="tx-bottom-cta-inner">
+        <div class="tx-bottom-cta-text">
+          <h3>This is exactly what we build for you.</h3>
+          <p>Send your resume. We handle everything. Live in 24 hours.</p>
+        </div>
+        <div class="tx-bottom-cta-btns">
+          <a href="https://wa.me/918830376414?text=Hi%20Pramod!%20I%20just%20saw%20the%20demo%20and%20I%20want%20my%20portfolio%20built!%20Here%20is%20my%20resume." target="_blank" class="tx-cta-wa">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Get Mine on WhatsApp
+          </a>
+          <a href="mailto:pramodtidkework@gmail.com?subject=I want my Portfolio built!&body=Hi Pramod! I just saw the demo and I want my portfolio built. Here is my resume." class="tx-cta-email">✉️ Email My Resume</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS SECTION -->
+<section id="testimonials" style="background:#0A0F1E;padding:6rem 2rem;">
+  <div class="container">
+    <span class="section-label reveal" style="display:block;text-align:center;">// client_reviews.json</span>
+    <h2 class="section-title reveal" style="text-align:center;">What Our Clients<br><span class="gradient-text">Are Saying</span></h2>
+    <p style="text-align:center;color:#94A3B8;margin-bottom:3rem;" class="reveal">Real professionals. Real portfolios. Real results.</p>
+
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="testi-quote">"</div>
+        <p class="testi-text">Pramod built my portfolio in just 5 days. The terminal design is exactly what I wanted — clean, dark, and professional. Got 3 interview calls within a week of adding the link to my resume!</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#2563EB,#7C3AED);">UK</div>
+          <div>
+            <div class="testi-name">Ujwal Akare</div>
+            <div class="testi-role">DevOps Engineer · ujwalakare.in</div>
+          </div>
+          <a href="https://ujwalakare.in" target="_blank" class="testi-link">View Portfolio →</a>
+        </div>
+      </div>
+
+      <div class="testi-card reveal">
+        <div class="testi-quote">"</div>
+        <p class="testi-text">I had no idea how to set up a portfolio or GitHub Pages. Pramod handled everything from scratch — my resume went in and a live website came out. Worth every rupee.</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:linear-gradient(135deg,#F97316,#EF4444);">SS</div>
+          <div>
+            <div class="testi-name">Sumit Shahare</div>
+            <div class="testi-role">Developer · sumitshahare.github.io</div>
+          </div>
+          <a href="https://sumitshahare.github.io/sumit-website/" target="_blank" class="testi-link">View Portfolio →</a>
+        </div>
+      </div>
+
+      <div class="testi-card testi-cta-card reveal">
+        <div class="testi-cta-content">
+          <div class="testi-cta-icon">⭐</div>
+          <h3>Be Our Next Success Story</h3>
+          <p>Join professionals who already stand out with a PortfolioPro portfolio.</p>
+          <a href="https://wa.me/918830376414?text=Hi%20Pramod!%20I%20want%20to%20be%20your%20next%20success%20story.%20Can%20we%20discuss?" target="_blank" class="tx-cta-wa" style="display:inline-flex;margin-top:1rem;">
+            🚀 Start Today — ₹1,999
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ===== TRANSFORM SECTION ===== */
+.tx-stage {
+  display: grid;
+  grid-template-columns: 1fr 140px 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto 2rem;
+}
+
+.tx-card {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #1E293B;
+  min-height: 440px;
+  transition: all 0.6s cubic-bezier(0.4,0,0.2,1);
+}
+
+.tx-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1rem;
+  background: #1a2332;
+  border-bottom: 1px solid #1E293B;
+}
+
+.tx-bar-portfolio { background: rgba(37,99,235,0.12); border-bottom-color: rgba(37,99,235,0.2); }
+
+.tx-dots { display: flex; gap: 5px; }
+.d-red { width:10px;height:10px;border-radius:50%;background:#ef4444; }
+.d-yellow { width:10px;height:10px;border-radius:50%;background:#f59e0b; }
+.d-green { width:10px;height:10px;border-radius:50%;background:#22c55e; }
+
+.tx-filename { font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:#64748B;flex:1; }
+.tx-badge-boring { font-size:0.65rem;background:#1a1a1a;color:#ef4444;border:1px solid rgba(239,68,68,0.3);padding:0.15rem 0.5rem;border-radius:100px; }
+.tx-badge-live { font-size:0.65rem;color:#22c55e;font-family:'JetBrains Mono',monospace;animation:pulse 2s infinite; }
+
+/* Resume body */
+.tx-resume { background:#fefefe; }
+.tx-resume-body { padding:1.2rem;background:#fafaf8;min-height:390px; }
+.tx-resume-header { display:flex;gap:0.8rem;margin-bottom:0.8rem;align-items:flex-start; }
+.tx-resume-avatar { width:44px;height:44px;background:#e2e8f0;border-radius:4px;flex-shrink:0; }
+.tx-resume-name { font-size:1rem;font-weight:700;color:#111;font-family:'Inter',sans-serif; }
+.tx-resume-role { font-size:0.75rem;color:#555;font-family:'Inter',sans-serif; }
+.tx-resume-contact { font-size:0.65rem;color:#888;font-family:'Inter',sans-serif;margin-top:0.2rem; }
+.tx-hr { height:1px;background:#ddd;margin:0.6rem 0; }
+.tx-resume-section { font-size:0.65rem;font-weight:700;color:#111;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.3rem;font-family:'Inter',sans-serif; }
+.tx-resume-job { font-size:0.75rem;font-weight:600;color:#222;font-family:'Inter',sans-serif; }
+.tx-resume-date { font-size:0.65rem;color:#888;margin-bottom:0.2rem;font-family:'Inter',sans-serif; }
+.tx-resume-text { font-size:0.7rem;color:#444;margin-bottom:0.15rem;font-family:'Inter',sans-serif; }
+
+/* Middle */
+.tx-mid { display:flex;flex-direction:column;align-items:center;gap:1.2rem; }
+
+.tx-arrow-wrap { display:flex;flex-direction:column;align-items:center;gap:0.4rem; }
+.tx-arrow-line {
+  width:2px;height:0;background:linear-gradient(180deg,#2563EB,#F97316);
+  transition:height 0.8s ease;border-radius:2px;
+}
+.tx-arrow-line.active { height:40px; }
+.tx-arrow-icon { animation:bounceX 1.5s infinite; }
+@keyframes bounceX { 0%,100%{transform:translateX(0)} 50%{transform:translateX(5px)} }
+
+.tx-btn {
+  background:linear-gradient(135deg,#2563EB,#7C3AED);
+  color:white;
+  border:none;
+  padding:1rem 1.4rem;
+  border-radius:12px;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:0.95rem;
+  font-weight:700;
+  cursor:pointer;
+  transition:all 0.3s;
+  box-shadow:0 4px 24px rgba(37,99,235,0.4);
+  white-space:nowrap;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:0.3rem;
+  width:130px;
+}
+.tx-btn:hover { transform:scale(1.06);box-shadow:0 8px 32px rgba(37,99,235,0.6); }
+.tx-btn:disabled { opacity:0.7;cursor:not-allowed;transform:none; }
+.tx-btn-icon { font-size:1.4rem; }
+.tx-powered { font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:#334155;text-align:center; }
+
+/* Portfolio card */
+.tx-portfolio { background:#0A0F1E;border-color:#1E293B;position:relative; }
+.tx-portfolio-body { padding:1.2rem;min-height:390px;position:relative; }
+
+.tx-locked {
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:rgba(10,15,30,0.92);
+  z-index:10;
+  transition:all 0.5s ease;
+  border-radius:0 0 14px 14px;
+}
+.tx-lock-icon { font-size:2.5rem;margin-bottom:0.8rem;opacity:0.5; }
+.tx-lock-text { color:#475569;font-family:'JetBrains Mono',monospace;font-size:0.8rem; }
+
+.tx-locked.hidden { opacity:0;pointer-events:none; }
+
+.tx-portfolio-content { opacity:0;transition:opacity 0.3s; }
+.tx-portfolio-content.visible { opacity:1; }
+
+/* Portfolio content styles */
+.tx-p-hero { display:flex;gap:0.8rem;align-items:flex-start;margin-bottom:1rem; }
+.tx-p-avatar { width:44px;height:44px;background:linear-gradient(135deg,#2563EB,#F97316);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.85rem;color:white;flex-shrink:0; }
+.tx-p-cmd { margin-bottom:0.2rem; }
+.tx-p-name { font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:700;color:#F8FAFC; }
+.tx-p-role { font-size:0.75rem;color:#94A3B8;margin-bottom:0.4rem; }
+.tx-p-links { display:flex;gap:0.4rem;flex-wrap:wrap; }
+.tx-p-link { font-size:0.62rem;color:#F97316;background:rgba(249,115,22,0.1);border:1px solid rgba(249,115,22,0.2);padding:0.15rem 0.45rem;border-radius:100px;font-family:'JetBrains Mono',monospace; }
+.tx-p-link-o { color:#3B82F6;background:rgba(37,99,235,0.1);border-color:rgba(37,99,235,0.2); }
+
+.tx-p-block { margin-bottom:0.9rem; }
+.tx-p-cmd-label { font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:#2563EB;margin-bottom:0.4rem; }
+
+.tx-p-tags { display:flex;flex-wrap:wrap;gap:0.3rem; }
+.tx-tag { background:rgba(37,99,235,0.15);border:1px solid rgba(37,99,235,0.3);color:#3B82F6;padding:0.18rem 0.55rem;border-radius:100px;font-size:0.65rem;font-family:'JetBrains Mono',monospace; }
+.tx-tag-o { background:rgba(249,115,22,0.15);border-color:rgba(249,115,22,0.3);color:#F97316; }
+
+.tx-p-exp { background:#0F172A;border:1px solid #1E293B;border-radius:8px;padding:0.8rem; }
+.tx-p-exp-role { font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:0.82rem;color:#F8FAFC; }
+.tx-p-exp-co { font-size:0.65rem;color:#475569;margin-bottom:0.4rem;font-family:'JetBrains Mono',monospace; }
+.tx-p-exp-pt { font-size:0.68rem;color:#94A3B8;margin-bottom:0.15rem; }
+
+.tx-p-certs { display:flex;gap:0.5rem; }
+.tx-cert { background:rgba(37,99,235,0.1);border:1px solid rgba(37,99,235,0.2);color:#3B82F6;padding:0.2rem 0.6rem;border-radius:6px;font-size:0.68rem;font-family:'JetBrains Mono',monospace; }
+
+.tx-p-success { margin-top:0.8rem;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.2);color:#22c55e;font-size:0.72rem;padding:0.4rem 0.8rem;border-radius:8px;font-family:'JetBrains Mono',monospace;text-align:center; }
+
+/* Animations */
+.tx-anim-1,.tx-anim-2,.tx-anim-3,.tx-anim-4,.tx-anim-5 { opacity:0;transform:translateY(12px);transition:opacity 0.5s ease,transform 0.5s ease; }
+.tx-portfolio.transformed .tx-anim-1 { opacity:1;transform:translateY(0);transition-delay:0.1s; }
+.tx-portfolio.transformed .tx-anim-2 { opacity:1;transform:translateY(0);transition-delay:0.3s; }
+.tx-portfolio.transformed .tx-anim-3 { opacity:1;transform:translateY(0);transition-delay:0.5s; }
+.tx-portfolio.transformed .tx-anim-4 { opacity:1;transform:translateY(0);transition-delay:0.7s; }
+.tx-portfolio.transformed .tx-anim-5 { opacity:1;transform:translateY(0);transition-delay:0.9s; }
+
+.tx-portfolio.transformed { border-color:#2563EB;box-shadow:0 0 40px rgba(37,99,235,0.25); }
+.tx-resume.faded { opacity:0.35;filter:blur(1px);transform:scale(0.97); }
+
+/* Progress bar */
+.tx-progress-wrap { max-width:600px;margin:1.5rem auto 0;text-align:center; }
+.tx-progress-bar { height:4px;background:linear-gradient(90deg,#2563EB,#F97316);border-radius:2px;width:0%;transition:width 2s ease; }
+.tx-progress-label { font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:#475569;margin-top:0.6rem; }
+
+/* Reset */
+.tx-reset-btn { background:transparent;border:1px solid #1E293B;color:#475569;padding:0.5rem 1.2rem;border-radius:8px;font-family:'Space Grotesk',sans-serif;font-size:0.85rem;cursor:pointer;transition:all 0.2s;margin-top:0.5rem; }
+.tx-reset-btn:hover { border-color:#2563EB;color:#3B82F6; }
+
+/* Bottom CTA */
+.tx-bottom-cta { margin-top:4rem; }
+.tx-bottom-cta-inner { background:linear-gradient(135deg,rgba(37,99,235,0.1),rgba(249,115,22,0.05));border:1px solid rgba(37,99,235,0.2);border-radius:16px;padding:2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:2rem;max-width:900px;margin:0 auto; }
+.tx-bottom-cta-text h3 { font-family:'Space Grotesk',sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:0.4rem; }
+.tx-bottom-cta-text p { color:#94A3B8;font-size:0.95rem; }
+.tx-bottom-cta-btns { display:flex;gap:1rem;flex-wrap:wrap; }
+
+.tx-cta-wa { display:inline-flex;align-items:center;gap:0.5rem;background:#25D366;color:white;padding:0.85rem 1.8rem;border-radius:8px;font-weight:700;font-size:0.95rem;text-decoration:none;transition:all 0.3s;box-shadow:0 4px 20px rgba(37,211,102,0.3); }
+.tx-cta-wa:hover { transform:translateY(-2px);box-shadow:0 8px 30px rgba(37,211,102,0.5); }
+.tx-cta-email { display:inline-flex;align-items:center;gap:0.5rem;background:transparent;color:#F8FAFC;padding:0.85rem 1.8rem;border-radius:8px;font-weight:600;font-size:0.95rem;text-decoration:none;border:1px solid #1E293B;transition:all 0.3s; }
+.tx-cta-email:hover { border-color:#2563EB;box-shadow:0 0 20px rgba(37,99,235,0.2); }
+
+/* ===== TESTIMONIALS ===== */
+.testi-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;max-width:1000px;margin:0 auto; }
+.testi-card { background:#0F172A;border:1px solid #1E293B;border-radius:14px;padding:1.8rem;transition:all 0.3s;position:relative; }
+.testi-card:hover { border-color:#2563EB;box-shadow:0 0 30px rgba(37,99,235,0.15);transform:translateY(-4px); }
+.testi-quote { font-size:4rem;color:#2563EB;opacity:0.3;line-height:1;margin-bottom:0.5rem;font-family:'Space Grotesk',sans-serif; }
+.testi-text { color:#94A3B8;font-size:0.92rem;line-height:1.8;margin-bottom:1.5rem; }
+.testi-author { display:flex;align-items:center;gap:0.8rem;flex-wrap:wrap; }
+.testi-avatar { width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.85rem;color:white;flex-shrink:0; }
+.testi-name { font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:0.9rem; }
+.testi-role { color:#475569;font-size:0.75rem;font-family:'JetBrains Mono',monospace; }
+.testi-link { margin-left:auto;color:#F97316;font-size:0.78rem;text-decoration:none;font-family:'JetBrains Mono',monospace;transition:color 0.2s; }
+.testi-link:hover { color:#3B82F6; }
+
+.testi-cta-card { background:linear-gradient(135deg,rgba(37,99,235,0.08),rgba(249,115,22,0.04));border-color:rgba(37,99,235,0.2);display:flex;align-items:center;justify-content:center; }
+.testi-cta-content { text-align:center; }
+.testi-cta-icon { font-size:2.5rem;margin-bottom:1rem; }
+.testi-cta-content h3 { font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:0.5rem; }
+.testi-cta-content p { color:#94A3B8;font-size:0.88rem; }
+
+/* Responsive */
+@media(max-width:768px){
+  .tx-stage { grid-template-columns:1fr;max-width:400px;margin:0 auto 2rem; }
+  .tx-mid { flex-direction:row;justify-content:center; }
+  .tx-arrow-wrap { flex-direction:row; }
+  .tx-arrow-line { width:0;height:2px;transition:width 0.8s ease; }
+  .tx-arrow-line.active { width:40px;height:2px; }
+  .tx-bottom-cta-inner { flex-direction:column;text-align:center; }
+  .tx-bottom-cta-btns { justify-content:center; }
+}
+</style>
+
+<script>
+var txDone = false;
+var txSteps = [
+  'Reading your resume...',
+  'Designing your layout...',
+  'Building sections...',
+  'Optimizing GitHub profile...',
+  'Connecting domain...',
+  'Going live! 🚀'
+];
+
+function txGo() {
+  if (txDone) return;
+  txDone = true;
+
+  var btn = document.getElementById('tx-btn');
+  var label = document.getElementById('tx-btn-label');
+  var resume = document.getElementById('tx-resume');
+  var portfolio = document.getElementById('tx-portfolio');
+  var locked = document.getElementById('tx-locked');
+  var content = document.getElementById('tx-portfolio-content');
+  var progressWrap = document.getElementById('tx-progress-wrap');
+  var progressBar = document.getElementById('tx-progress-bar');
+  var progressLabel = document.getElementById('tx-progress-label');
+  var arrowLine = document.getElementById('tx-arrow-line');
+  var resetBtn = document.getElementById('tx-reset');
+
+  btn.disabled = true;
+
+  // Step 1 - arrow animates
+  arrowLine.classList.add('active');
+  label.textContent = 'Working...';
+
+  // Show progress
+  progressWrap.style.display = 'block';
+  progressBar.style.width = '0%';
+
+  var step = 0;
+  var stepInterval = setInterval(function() {
+    if (step < txSteps.length) {
+      progressLabel.textContent = txSteps[step];
+      progressBar.style.width = ((step + 1) / txSteps.length * 100) + '%';
+      step++;
+    } else {
+      clearInterval(stepInterval);
+    }
+  }, 350);
+
+  // Step 2 - fade resume
+  setTimeout(function() { resume.classList.add('faded'); }, 400);
+
+  // Step 3 - unlock portfolio
+  setTimeout(function() {
+    locked.classList.add('hidden');
+    setTimeout(function() {
+      content.classList.add('visible');
+      portfolio.classList.add('transformed');
+    }, 300);
+  }, 1800);
+
+  // Step 4 - done
+  setTimeout(function() {
+    label.textContent = '✅ Done!';
+    progressLabel.textContent = '🎉 Portfolio is LIVE!';
+    resetBtn.style.display = 'inline-block';
+  }, 2400);
+}
+
+function txReset() {
+  txDone = false;
+  var btn = document.getElementById('tx-btn');
+  var label = document.getElementById('tx-btn-label');
+  var resume = document.getElementById('tx-resume');
+  var portfolio = document.getElementById('tx-portfolio');
+  var locked = document.getElementById('tx-locked');
+  var content = document.getElementById('tx-portfolio-content');
+  var progressWrap = document.getElementById('tx-progress-wrap');
+  var progressBar = document.getElementById('tx-progress-bar');
+  var progressLabel = document.getElementById('tx-progress-label');
+  var arrowLine = document.getElementById('tx-arrow-line');
+  var resetBtn = document.getElementById('tx-reset');
+
+  resume.classList.remove('faded');
+  portfolio.classList.remove('transformed');
+  locked.classList.remove('hidden');
+  content.classList.remove('visible');
+  arrowLine.classList.remove('active');
+  progressWrap.style.display = 'none';
+  progressBar.style.width = '0%';
+  progressLabel.textContent = '';
+  btn.disabled = false;
+  label.textContent = 'Transform Now';
+  resetBtn.style.display = 'none';
+}
+</script>
+
+<!-- RESUME LINK SECTION -->
+<section id="resume-link" style="background:#080d1a;padding:6rem 2rem;overflow:hidden;">
+  <div class="container">
+    <span class="section-label reveal" style="display:block;text-align:center;">// resume.addLink()</span>
+    <h2 class="section-title reveal" style="text-align:center;">One Link. Added Here.<br><span class="gradient-text">Changes Everything.</span></h2>
+    <p style="text-align:center;color:#94A3B8;font-size:1rem;max-width:560px;margin:0 auto 3rem;" class="reveal">Recruiters see your contact section before they read anything else. This is where your portfolio link lives — and where it does all the work.</p>
+
+    <div class="rl-wrapper reveal">
+
+      <!-- Left — Without -->
+      <div class="rl-side">
+        <div class="rl-label rl-label-bad">❌ Without Portfolio Link</div>
+        <div class="rl-resume rl-resume-plain">
+          <div class="rl-resume-name">Rohan Mehta</div>
+          <div class="rl-resume-title">DevOps Engineer</div>
+          <div class="rl-contact-row">
+            <span class="rl-contact-item">📧 rohan@gmail.com</span>
+            <span class="rl-contact-item">📞 98XXXXXXXX</span>
+            <span class="rl-contact-item">📍 Pune, India</span>
+          </div>
+          <div class="rl-missing">
+            <span class="rl-missing-line">_ _ _ _ _ _ _ _ _ _ _ _ _</span>
+            <span class="rl-missing-label">No portfolio link</span>
+          </div>
+          <div class="rl-divider"></div>
+          <div class="rl-section-title">SKILLS</div>
+          <div class="rl-skills-plain">AWS, Docker, Kubernetes, Terraform, CI/CD, Linux</div>
+          <div class="rl-divider"></div>
+          <div class="rl-section-title">EXPERIENCE</div>
+          <div class="rl-exp-plain">DevOps Engineer — XYZ Technologies · 2021–Present</div>
+          <div class="rl-exp-plain" style="color:#999;">• Managed AWS infrastructure for 50+ microservices</div>
+        </div>
+        <div class="rl-verdict rl-verdict-bad">
+          <span>😴</span> Looks like every other resume. Forgotten in the pile.
+        </div>
+      </div>
+
+      <!-- VS -->
+      <div class="rl-vs">
+        <div class="rl-vs-circle">VS</div>
+        <div class="rl-vs-arrow">↓</div>
+      </div>
+
+      <!-- Right — With -->
+      <div class="rl-side">
+        <div class="rl-label rl-label-good">✅ With PortfolioPro Link</div>
+        <div class="rl-resume rl-resume-pro">
+          <div class="rl-resume-name">Rohan Mehta</div>
+          <div class="rl-resume-title">DevOps Engineer</div>
+          <div class="rl-contact-row">
+            <span class="rl-contact-item">📧 rohan@gmail.com</span>
+            <span class="rl-contact-item">📞 98XXXXXXXX</span>
+            <span class="rl-contact-item">📍 Pune, India</span>
+          </div>
+
+          <!-- THE KEY LINE -->
+          <div class="rl-portfolio-line" id="rl-portfolio-line">
+            <div class="rl-glow-bar"></div>
+            <div class="rl-portfolio-link-row">
+              <span class="rl-globe">🌐</span>
+              <span class="rl-link-text">rohanmehta.in</span>
+              <span class="rl-link-badge">Portfolio</span>
+            </div>
+            <div class="rl-arrow-label">
+              <div class="rl-arrow-line"></div>
+              <span class="rl-arrow-text">👈 Add your link here</span>
+            </div>
+          </div>
+
+          <div class="rl-divider"></div>
+          <div class="rl-section-title">SKILLS</div>
+          <div class="rl-skills-plain">AWS, Docker, Kubernetes, Terraform, CI/CD, Linux</div>
+          <div class="rl-divider"></div>
+          <div class="rl-section-title">EXPERIENCE</div>
+          <div class="rl-exp-plain">DevOps Engineer — XYZ Technologies · 2021–Present</div>
+          <div class="rl-exp-plain" style="color:#999;">• Managed AWS infrastructure for 50+ microservices</div>
+        </div>
+        <div class="rl-verdict rl-verdict-good">
+          <span>🚀</span> Recruiter clicks before reading anything else. You get the call.
+        </div>
+      </div>
+    </div>
+
+    <!-- Recruiter POV -->
+    <div class="rl-recruiter-pov reveal">
+      <div class="rl-pov-steps">
+        <div class="rl-pov-step">
+          <div class="rl-pov-num">1</div>
+          <div class="rl-pov-text">Recruiter opens your resume</div>
+        </div>
+        <div class="rl-pov-arrow">→</div>
+        <div class="rl-pov-step">
+          <div class="rl-pov-num">2</div>
+          <div class="rl-pov-text">Sees <strong style="color:#2563EB;">rohanmehta.in</strong> in contact</div>
+        </div>
+        <div class="rl-pov-arrow">→</div>
+        <div class="rl-pov-step">
+          <div class="rl-pov-num">3</div>
+          <div class="rl-pov-text">Clicks it before reading further</div>
+        </div>
+        <div class="rl-pov-arrow">→</div>
+        <div class="rl-pov-step rl-pov-step-highlight">
+          <div class="rl-pov-num" style="background:linear-gradient(135deg,#2563EB,#F97316);border-color:transparent;">✓</div>
+          <div class="rl-pov-text" style="color:#22c55e;">You get the interview call</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div style="text-align:center;margin-top:3rem;" class="reveal">
+      <p style="color:#94A3B8;margin-bottom:1.5rem;font-size:1rem;">Get your <strong style="color:#F8FAFC;">yourname.in</strong> portfolio link in <strong style="color:#F97316;">24 hours.</strong></p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="https://wa.me/918830376414?text=Hi%20Pramod!%20I%20want%20my%20portfolio%20link%20for%20my%20resume.%20Can%20we%20get%20started?" target="_blank" class="tx-cta-wa">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Get My Portfolio Link
+        </a>
+        <a href="mailto:pramodtidkework@gmail.com?subject=I want my portfolio link for my resume!" class="tx-cta-email">✉️ Send Email</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ===== RESUME LINK SECTION ===== */
+.rl-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 80px 1fr;
+  gap: 2rem;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto 3rem;
+}
+
+.rl-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+.rl-label-bad { background: rgba(239,68,68,0.1); color: #ef4444; border: 1px solid rgba(239,68,68,0.2); }
+.rl-label-good { background: rgba(34,197,94,0.1); color: #22c55e; border: 1px solid rgba(34,197,94,0.2); }
+
+.rl-resume {
+  border-radius: 12px;
+  padding: 1.5rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.rl-resume-plain {
+  background: #f8f8f6;
+  border: 1px solid #e2e8f0;
+}
+
+.rl-resume-pro {
+  background: #f8f8f6;
+  border: 2px solid #2563EB;
+  box-shadow: 0 0 30px rgba(37,99,235,0.15);
+}
+
+.rl-resume-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.2rem;
+}
+
+.rl-resume-title {
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 0.6rem;
+}
+
+.rl-contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.rl-contact-item {
+  font-size: 0.72rem;
+  color: #444;
+  background: #f0f0ee;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.rl-missing {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+  padding: 0.4rem 0.6rem;
+  background: #fff5f5;
+  border-radius: 6px;
+  border: 1px dashed #fecaca;
+}
+.rl-missing-line { color: #fca5a5; font-size: 0.8rem; letter-spacing: 2px; }
+.rl-missing-label { font-size: 0.68rem; color: #ef4444; font-family: 'JetBrains Mono', monospace; }
+
+.rl-divider { height: 1px; background: #e2e8f0; margin: 0.7rem 0; }
+.rl-section-title { font-size: 0.65rem; font-weight: 700; color: #111; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 0.3rem; }
+.rl-skills-plain { font-size: 0.72rem; color: #444; margin-bottom: 0.3rem; }
+.rl-exp-plain { font-size: 0.72rem; color: #333; margin-bottom: 0.2rem; }
+
+/* THE MAGIC LINE */
+.rl-portfolio-line {
+  position: relative;
+  margin-bottom: 0.6rem;
+  border-radius: 8px;
+  overflow: visible;
+}
+
+.rl-glow-bar {
+  position: absolute;
+  inset: -2px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #2563EB, #F97316, #2563EB);
+  background-size: 200% 100%;
+  animation: glowShift 2s linear infinite;
+  z-index: 0;
+  opacity: 0.7;
+}
+
+@keyframes glowShift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.rl-portfolio-link-row {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #EFF6FF;
+  padding: 0.5rem 0.8rem;
+  border-radius: 7px;
+  border: 1px solid rgba(37,99,235,0.2);
+}
+
+.rl-globe { font-size: 0.9rem; }
+.rl-link-text { font-size: 0.82rem; font-weight: 600; color: #2563EB; font-family: 'JetBrains Mono', monospace; }
+.rl-link-badge {
+  margin-left: auto;
+  font-size: 0.6rem;
+  background: rgba(37,99,235,0.15);
+  color: #2563EB;
+  padding: 0.15rem 0.5rem;
+  border-radius: 100px;
+  font-weight: 600;
+  animation: badgePulse 2s infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37,99,235,0.4); }
+  50% { box-shadow: 0 0 0 4px rgba(37,99,235,0); }
+}
+
+.rl-arrow-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+  padding-left: 0.3rem;
+}
+.rl-arrow-line { flex: 1; height: 1px; background: linear-gradient(90deg, #2563EB, transparent); }
+.rl-arrow-text { font-size: 0.72rem; color: #F97316; font-family: 'JetBrains Mono', monospace; white-space: nowrap; animation: arrowBounce 1.5s infinite; }
+
+@keyframes arrowBounce {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-4px); }
+}
+
+.rl-verdict {
+  margin-top: 1rem;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.rl-verdict-bad { background: rgba(239,68,68,0.08); color: #ef4444; border: 1px solid rgba(239,68,68,0.15); }
+.rl-verdict-good { background: rgba(34,197,94,0.08); color: #22c55e; border: 1px solid rgba(34,197,94,0.15); }
+
+/* VS */
+.rl-vs { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+.rl-vs-circle {
+  width: 44px; height: 44px;
+  background: var(--orange);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: white;
+  box-shadow: 0 0 20px rgba(249,115,22,0.3);
+}
+.rl-vs-arrow { color: #475569; font-size: 1.2rem; display: none; }
+
+/* Recruiter POV */
+.rl-recruiter-pov {
+  max-width: 900px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(37,99,235,0.06), rgba(249,115,22,0.03));
+  border: 1px solid rgba(37,99,235,0.15);
+  border-radius: 14px;
+  padding: 2rem;
+}
+
+.rl-pov-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.rl-pov-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  text-align: center;
+  max-width: 130px;
+}
+
+.rl-pov-num {
+  width: 36px; height: 36px;
+  background: rgba(37,99,235,0.15);
+  border: 2px solid #2563EB;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #3B82F6;
+}
+
+.rl-pov-text {
+  font-size: 0.8rem;
+  color: #94A3B8;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.4;
+}
+
+.rl-pov-step-highlight .rl-pov-text { color: #22c55e; font-weight: 600; }
+
+.rl-pov-arrow {
+  font-size: 1.5rem;
+  color: #2563EB;
+  opacity: 0.5;
+  animation: arrowPulse 1.5s infinite;
+}
+
+@keyframes arrowPulse {
+  0%, 100% { opacity: 0.3; transform: translateX(0); }
+  50% { opacity: 0.8; transform: translateX(4px); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .rl-wrapper { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto 2rem; }
+  .rl-vs { flex-direction: row; }
+  .rl-vs-circle { width: 36px; height: 36px; font-size: 0.75rem; }
+  .rl-vs-arrow { display: block; }
+  .rl-pov-steps { gap: 0.5rem; }
+  .rl-pov-arrow { font-size: 1rem; }
+}
+</style>
+
+<!-- WHAT'S INCLUDED -->
+<section id="included">
+  <div class="container">
+    <span class="section-label reveal">// package.json</span>
+    <h2 class="section-title reveal">Everything Included.<br>Zero Surprises.</h2>
+    <p class="section-sub reveal">One package. One price. Complete professional presence — built from just your resume.</p>
+
+    <div class="included-grid">
+      <div class="included-item reveal">
+        <div class="included-check">✓</div>
+        <div class="included-text">
+          <h4>Portfolio Website</h4>
+          <p>5-section site built directly from your resume — About, Skills, Experience, Projects, Contact.</p>
+        </div>
+      </div>
+      <div class="included-item reveal">
+        <div class="included-check">✓</div>
+        <div class="included-text">
+          <h4>.in Domain Included (1 Year)</h4>
+          <p>Your own yourname.in — no hidden costs, no domain hunting. We handle everything.</p>
+        </div>
+      </div>
+      <div class="included-item reveal">
+        <div class="included-check">✓</div>
+        <div class="included-text">
+          <h4>GitHub Pages Hosting</h4>
+          <p>Fast, reliable, free hosting for life. No monthly bills — ever.</p>
+        </div>
+      </div>
+      <div class="included-item reveal">
+        <div class="included-check">✓</div>
+        <div class="included-text">
+          <h4>Terminal Aesthetic Design</h4>
+          <p>Premium dark design that makes tech professionals look the part. Clean and cinematic.</p>
+        </div>
+      </div>
+      <div class="included-item reveal">
+        <div class="included-check">✓</div>
+        <div class="included-text">
+          <h4>GitHub Profile Optimization</h4>
+          <p>README, pinned repos, bio, and activity — your GitHub will look as good as your site.</p>
+        </div>
+      </div>
+      <div class="included-item reveal">
+        <div class="included-check">✓</div>
+        <div class="included-text">
+          <h4>Custom Domain Setup</h4>
+          <p>Domain bought, DNS configured, and connected to your site. You get a live URL.</p>
+        </div>
+      </div>
+      <div class="included-item reveal">
+        <div class="included-check">✓</div>
+        <div class="included-text">
+          <h4>LinkedIn + GitHub Integration</h4>
+          <p>All your profiles linked and consistent. One click for recruiters to verify you.</p>
+        </div>
+      </div>
+      <div class="included-item reveal">
+        <div class="included-check">✓</div>
+        <div class="included-text">
+          <h4>SEO Basics</h4>
+          <p>Meta tags, page title, and description so Google finds you when recruiters search your name.</p>
+        </div>
+      </div>
+      <div class="included-item reveal">
+        <div class="included-check">✓</div>
+        <div class="included-text">
+          <h4>Mobile Responsive</h4>
+          <p>Looks perfect on every screen — desktop, tablet, and mobile.</p>
+        </div>
+      </div>
+      <div class="included-item reveal">
+        <div class="included-check">✓</div>
+        <div class="included-text">
+          <h4>2 Revision Rounds + 1 Month Support</h4>
+          <p>Changes after delivery? We've got you covered for 30 days post-launch.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="price-box reveal">
+      <p class="price-label">🔥 Founder's Offer — First 2 clients only</p>
+      <div style="display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:0.5rem;">
+        <del style="color:#475569;font-size:1.5rem;">₹7,999</del>
+        <div class="price">₹1,999</div>
+        <span style="background:#F97316;color:white;font-size:0.85rem;font-weight:700;padding:0.3rem 0.8rem;border-radius:100px;font-family:'Space Grotesk',sans-serif;">75% OFF</span>
+      </div>
+      <p class="price-label" style="margin-top:0.5rem;">One time. No monthly fees. No hidden costs.</p>
+      <p style="font-size:0.85rem;color:#F97316;margin-top:0.5rem;font-family:'JetBrains Mono',monospace;">⚡ Only 2 spots at this price. After that ₹7,999.</p>
+      <div class="price-ctas">
+        <a href="https://wa.me/918830376414?text=Hi%20Pramod!%20I%20want%20to%20get%20started%20with%20PortfolioPro." target="_blank" class="btn-primary">
+          🚀 Get Started on WhatsApp
+        </a>
+        <a href="mailto:pramodtidkework@gmail.com?subject=PortfolioPro - I'm Ready!" class="btn-secondary">
+          ✉️ Email Us
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR WORK -->
+<section id="work">
+  <div class="container">
+    <span class="section-label reveal">// our_work/</span>
+    <h2 class="section-title reveal">Real Work.<br>Live Sites.</h2>
+    <p class="section-sub reveal">Don't take our word for it — click through and see what we've built.</p>
+
+    <div class="work-grid">
+
+      <!-- Real Client 1 -->
+      <div class="work-card reveal">
+        <div class="work-preview work-preview-real">
+          <span class="work-badge badge-live">● LIVE</span>
+          <div class="work-preview-inner">
+            <div class="work-preview-icon">🌐</div>
+            <div class="work-preview-url">ujwalakare.in</div>
+          </div>
+        </div>
+        <div class="work-info">
+          <h3>Ujwal Akare</h3>
+          <p>Professional portfolio with custom .in domain — clean, fast, recruiter-ready.</p>
+          <a href="https://ujwalakare.in" target="_blank" rel="noopener">View Live Site →</a>
+        </div>
+      </div>
+
+      <!-- Real Client 2 -->
+      <div class="work-card reveal">
+        <div class="work-preview work-preview-real">
+          <span class="work-badge badge-live">● LIVE</span>
+          <div class="work-preview-inner">
+            <div class="work-preview-icon">🌐</div>
+            <div class="work-preview-url">sumit-website</div>
+          </div>
+        </div>
+        <div class="work-info">
+          <h3>Sumit Shahare</h3>
+          <p>Developer portfolio hosted on GitHub Pages — projects, skills, and contact all in one place.</p>
+          <a href="https://sumitshahare.github.io/sumit-website/" target="_blank" rel="noopener">View Live Site →</a>
+        </div>
+      </div>
+
+      <!-- Demo Fresher -->
+      <div class="work-card reveal">
+        <div class="work-preview work-preview-demo">
+          <span class="work-badge badge-demo">DEMO</span>
+          <div class="work-preview-inner">
+            <div class="work-preview-icon">👨‍🎓</div>
+            <div style="color:#94A3B8;font-size:0.75rem;margin-top:0.3rem;">Fresher Level</div>
+          </div>
+        </div>
+        <div class="work-info">
+          <h3>Aarav Shah — Fresher</h3>
+          <p>BE CSE 2024 passout. First job seeker portfolio — Python, SQL, Git, college projects.</p>
+          <span style="color:#475569;font-size:0.85rem;font-family:var(--font-mono);">Demo persona</span>
+        </div>
+      </div>
+
+      <!-- Demo Mid -->
+      <div class="work-card reveal">
+        <div class="work-preview work-preview-demo">
+          <span class="work-badge badge-demo">DEMO</span>
+          <div class="work-preview-inner">
+            <div class="work-preview-icon">👩‍💻</div>
+            <div style="color:#94A3B8;font-size:0.75rem;margin-top:0.3rem;">Mid Level</div>
+          </div>
+        </div>
+        <div class="work-info">
+          <h3>Neha Kulkarni — Mid Level</h3>
+          <p>3 years Backend Developer switching to product company — Node.js, PostgreSQL, Docker.</p>
+          <span style="color:#475569;font-size:0.85rem;font-family:var(--font-mono);">Demo persona</span>
+        </div>
+      </div>
+
+      <!-- Demo Senior -->
+      <div class="work-card reveal">
+        <div class="work-preview work-preview-demo">
+          <span class="work-badge badge-demo">DEMO</span>
+          <div class="work-preview-inner">
+            <div class="work-preview-icon">🧑‍🚀</div>
+            <div style="color:#94A3B8;font-size:0.75rem;margin-top:0.3rem;">Senior Level</div>
+          </div>
+        </div>
+        <div class="work-info">
+          <h3>Rohan Mehta — Senior</h3>
+          <p>7 years DevOps/Cloud Engineer targeting lead roles — AWS, Kubernetes, Terraform, CI/CD.</p>
+          <span style="color:#475569;font-size:0.85rem;font-family:var(--font-mono);">Demo persona</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="container">
+    <span class="section-label reveal">// process.sh</span>
+    <h2 class="section-title reveal">How It Works</h2>
+    <p class="section-sub reveal">Send your resume. Get a live portfolio. It's that simple.</p>
+
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h3>Share Your Resume</h3>
+          <p>Send your resume via WhatsApp or email. PDF or Word — any format works.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h3>We Build Your Site</h3>
+          <p>We extract your experience, skills, and projects and design a portfolio tailored to you.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h3>GitHub Profile Optimization</h3>
+          <p>We clean up your GitHub — README, pinned repos, bio — so it matches your site's quality.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h3>Domain Purchase & Setup</h3>
+          <p>We buy your yourname.in domain and configure everything — DNS, SSL, hosting.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <h3>Deploy & Go Live</h3>
+          <p>Your site goes live on GitHub Pages with your custom domain connected and working.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">6</div>
+        <div class="step-content">
+          <h3>You Review & We Refine</h3>
+          <p>2 revision rounds included. We refine until you're completely happy with the result.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">7</div>
+        <div class="step-content">
+          <h3>Add It To Your Resume</h3>
+          <p>Drop your portfolio link on your resume and LinkedIn. Watch the interview requests come in.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROI CALCULATOR -->
+<section id="roi">
+  <div class="container">
+    <span class="section-label reveal">// roi_calculator.js</span>
+    <h2 class="section-title reveal" style="text-align:center;">How Fast Does ₹1,999<br>Pay For Itself?</h2>
+
+    <div class="roi-card reveal">
+      <h3>ROI Calculator</h3>
+      <p>Drag the slider to your expected salary at your next job.</p>
+
+      <div class="roi-input-group">
+        <label>Expected Annual Salary</label>
+        <input type="range" id="salary-slider" min="4" max="50" value="12" step="1" />
+        <div class="roi-value" id="salary-display">₹12 LPA</div>
+      </div>
+
+      <div class="roi-result">
+        <div>Your portfolio pays for itself in just</div>
+        <div class="roi-payback" id="payback-days">—</div>
+        <p>of your new salary. One good interview call covers it entirely.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERY TIMER -->
+<div id="delivery">
+  <div class="delivery-box reveal">
+    <h2>⚡ Order Today. Go Live in 24 Hours</h2>
+    <p>We deliver in 24 hours — guaranteed. Share your resume now and your portfolio is live tomorrow.</p>
+    <div class="delivery-date" id="delivery-date">Calculating...</div>
+    <a href="https://wa.me/918830376414?text=Hi%20Pramod!%20I%20want%20to%20order%20PortfolioPro%20today." target="_blank" class="btn-primary" style="display:inline-flex;">
+      🚀 Start Today
+    </a>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <span class="section-label reveal">// faq.md</span>
+    <h2 class="section-title reveal" style="text-align:center;">Frequently Asked<br>Questions</h2>
+
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q">Do I need any technical knowledge? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Zero. You just send your resume. We handle everything — design, hosting, domain, GitHub setup. You get a live link and instructions to add it to your resume.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">What if I don't have many projects? <span class="faq-icon">+</span></button>
+        <div class="faq-a">No problem. We work with what you have. Even college projects, internships, or personal learning projects can be showcased professionally. A well-presented project is better than no project.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">How long does it take? <span class="faq-icon">+</span></button>
+        <div class="faq-a">24 hours from the time you share your resume. We follow a structured process so there are no surprises. Need it faster? Contact us and we'll see what we can do.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">What do I need to share with you? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Just your resume — PDF or Word format. If you have a GitHub profile or LinkedIn, share those links too. That's it. We take it from there.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Is domain renewal extra after 1 year? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Yes. The first year is included in your ₹1,999 package. After that, domain renewal is approximately ₹600–900 per year which you manage directly. Hosting on GitHub Pages remains free forever.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">Can I choose my design style? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Yes. We offer 3 design styles — Terminal Dark (for DevOps/Backend engineers), Minimal Light (for business/analyst roles), and Modern Gradient (for full stack/frontend roles). You pick the one that fits your field.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">What is your refund policy? <span class="faq-icon">+</span></button>
+        <div class="faq-a">Since this is a custom service, refunds are not available once work has started. If you cancel before we begin, we offer a partial refund. Please read our full Refund Policy for details.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="cta-final">
+  <div class="container">
+    <h2 class="reveal">Ready to Stand Out?<br><span class="gradient-text">Let's Build Your Portfolio.</span></h2>
+    <p class="reveal">Share your resume today. Get a live portfolio in 24 hours. Add it to your resume and stand out from day one.</p>
+    <div class="cta-buttons reveal">
+      <a href="https://wa.me/918830376414?text=Hi%20Pramod!%20I'm%20ready%20to%20get%20started%20with%20PortfolioPro.%20Here's%20my%20resume." target="_blank" class="btn-whatsapp">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chat on WhatsApp
+      </a>
+      <a href="mailto:pramodtidkework@gmail.com?subject=PortfolioPro - Ready to Get Started!" class="btn-email">
+        ✉️ Send Email
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        Portfolio<span>Pro</span>
+        <p>by Pramod Tidke</p>
+      </div>
+      <div class="footer-links">
+        <a href="pages/terms.html">Terms & Conditions</a>
+        <a href="pages/privacy.html">Privacy Policy</a>
+        <a href="pages/refund.html">Refund Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 PortfolioPro by Pramod Tidke. All rights reserved.</p>
+      <div class="footer-contact">
+        <a href="https://wa.me/918830376414" target="_blank">WhatsApp</a>
+        <a href="mailto:pramodtidkework@gmail.com">Email</a>
+        <a href="https://pramodtidke.in" target="_blank">pramodtidke.in</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
